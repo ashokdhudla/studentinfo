@@ -7,3 +7,6 @@ def login(request):
 
 def registration(request):
     return render(request,'registration.html')
+
+def markslist(request):
+    return render(request,'markslist.html')
