@@ -6,7 +6,7 @@
 <body>
 <H1>Registration page</H1>
 
-<form>
+<form action="/student/registration/" method="POST">{% csrf_token %}
 
 <p>
     First Name:
@@ -36,9 +36,9 @@
 <input name="Gender" type="radio" value="female">Female
 <input name="Gender" type="radio" value="Other">Other <br><br>
 
-<input name="Gender" type="submit" value="Submit">
-<input name="Gender" type="reset" value="Reset">
-</body>
+<input name="submit" type="submit" value="Submit">
+<input name="reset" type="reset" value="Reset">
+
 
 
 </form>
