@@ -5,19 +5,15 @@
 
 <body>
 <H1>Registration page</H1>
-<<<<<<< HEAD
-<form>
-=======
->>>>>>> e2a6bb2751484451b3f6b3f5c82d71ad6a1e716d
+<form action="/student/registration/" method="POST">{% csrf_token %}
 <p>
     First Name:
 </p>
-<input name="FirstName" type="text">
-<<<<<<< HEAD
+<input name="firstname" type="text" >
 <p>
     Last Name:
 </p>
-<input name="LastName" type="text">
+<input name="lastname" type="text" >
 <p>
     Email Address:
 </p>
@@ -34,15 +30,12 @@
 <p>
     Gender:
 </p>
-<input name="Gender" type="radio" value="Male">Male
-<input name="Gender" type="radio" value="female">Female
-<input name="Gender" type="radio" value="Other">Other <br><br>
+<input name="gender" type="radio" value="Male">Male
+<input name="gender" type="radio" value="female">Female
+<input name="gender" type="radio" value="Other">Other <br><br>
 
-<input name="Gender" type="submit" value="Submit">
-<input name="Gender" type="reset" value="Reset">
-=======
-</body>
->>>>>>> e2a6bb2751484451b3f6b3f5c82d71ad6a1e716d
+<input name="submit" type="submit" value="Submit">
+<input name="reset" type="reset" value="Reset">
 
 </form>
 
