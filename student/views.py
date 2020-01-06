@@ -6,17 +6,17 @@ from .models import *
 
 def login(request):
     print(request)
-    if request.method=="POST":
+    if request.method == "POST":
         print("its a post method")
-        firstname=request.POST["firstname"]
-        password=request.POST["pwd"]
+        firstname = request.POST["firstname"]
+        password = request.POST["pwd"]
         print(firstname, password)
-    return render(request,'login.html')
+    return render(request, 'login.html')
 
 
 def registration(request):
     print(request)
-    if request.method=="POST":
+    if request.method == "POST":
         print("its a post method")
         student_object = studentinfo.objects.create()
         student_object.firstname = request.POST["firstname"]
@@ -29,11 +29,12 @@ def registration(request):
         student_object.save()
         print("student_object after")
 
-    return render(request,'registration.html')
+    return render(request, 'registration.html')
 
 
 def markslist(request):
-    return render(request,'markslist.html')
+    return render(request, 'markslist.html')
+
 
 def marksview(request):
-    return render(request,'marksview.html')
+    return render(request, 'marksview.html')

@@ -11,6 +11,7 @@ class studentinfo(models.Model):
     dob = models.DateField(max_length=20, null=True, blank=True)
     gender = models.CharField(max_length=20, null=True, blank=True)
     city = models.CharField(max_length=20, null=True, blank=True)
+
     def __str__(self):
         return str(self.firstname)
 
