@@ -1,1 +1,3 @@
 .idea/*
+student/__pycache__/*
+db.sqlite3
