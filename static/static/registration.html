@@ -9,32 +9,32 @@
 <form action="/student/registration/" method="POST">{% csrf_token %}
 
 <p>
-    First Name:
+    first name:
 </p>
-<input name="FirstName" type="text">
+<input name="firstname" type="text">
 <p>
-    Last Name:
+    last name:
 </p>
-<input name="LastName" type="text">
+<input name="lastname" type="text">
 <p>
-    Email Address:
+    email address:
 </p>
 <input name="email" type="email" required>
 <p>
-    Password:
+    password:
 </p>
 <input name="password" type="password"  minlength="8">
 
 <p>
-    Birthday:
+    birthday:
 </p>
-<input name="Birthday" type="date">
+<input name="birthday" type="date">
 <p>
-    Gender:
+    gender:
 </p>
-<input name="Gender" type="radio" value="Male">Male
-<input name="Gender" type="radio" value="female">Female
-<input name="Gender" type="radio" value="Other">Other <br><br>
+<input name="gender" type="radio" value="Male">Male
+<input name="gender" type="radio" value="female">Female
+<input name="gender" type="radio" value="Other">Other <br><br>
 
 <input name="submit" type="submit" value="Submit">
 <input name="reset" type="reset" value="Reset">
