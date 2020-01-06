@@ -19,12 +19,12 @@ def registration(request):
     if request.method=="POST":
         print("its a post method")
         student_object = studentinfo.objects.create()
-        student_object["firstname"] = request.POST["firstname"]
-        student_object["lsatname"] = request.POST["lastname"]
-        student_object["email"] = request.POST["email"]
-        student_object["password"] = request.POST["password"]
-        student_object["dob"] = request.POST["birthday"]
-        student_object["gender"] = request.POST["Gender"]
+        student_object.firstname = request.POST["firstname"]
+        student_object.lsatname = request.POST["lastname"]
+        student_object.email = request.POST["email"]
+        student_object.password = request.POST["password"]
+        student_object.dob = request.POST["birthday"]
+        student_object.gender = request.POST["gender"]
         print("student_object before")
         student_object.save()
         print("student_object after")
