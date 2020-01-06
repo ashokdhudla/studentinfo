@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
@@ -15,12 +16,17 @@ def registration(request):
     print(request)
     if request.method=="POST":
         print("its a post method")
-        FirstName=request.POST["FirstName"]
-        LastName= request.POST["LastName"]
-        EmailAddress=request.POST["email"]
-        Birthday=request.POST["Birthday"]
-        Gender=request.POST["Gender"]
-        print(FirstName,LastName,EmailAddress,Birthday,Gender)
+        student_object = studentinfo.objects.create()
+        student_object["firstname"] = request.POST["firstname"]
+        student_object["lsatname"] = request.POST["lastname"]
+        student_object["email"] = request.POST["email"]
+        student_object["password"] = request.POST["password"]
+        student_object["dob"] = request.POST["birthday"]
+        student_object["gender"] = request.POST["Gender"]
+        print("student_object before")
+        student_object.save()
+        print("student_object after")
+
     return render(request,'registration.html')
 
 def markslist(request):
