@@ -8,9 +8,13 @@ def login(request):
     print(request)
     if request.method == "POST":
         print("its a post method")
-        firstname = request.POST["firstname"]
+        email = request.POST["email"]
         password = request.POST["pwd"]
-        print(firstname, password)
+        student_object = studentinfo.objects.filter(email=email, password=password)
+        if student_object:
+            print("email and password")
+        else:
+            print("invalid emil or password")
     return render(request, 'login.html')
 
 
@@ -20,7 +24,7 @@ def registration(request):
         print("its a post method")
         student_object = studentinfo.objects.create()
         student_object.firstname = request.POST["firstname"]
-        student_object.lsatname = request.POST["lastname"]
+        student_object.lastname = request.POST["lastname"]
         student_object.email = request.POST["email"]
         student_object.password = request.POST["password"]
         student_object.dob = request.POST["birthday"]
