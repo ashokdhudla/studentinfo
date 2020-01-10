@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9469cd6-3cae-4e40-98e9-92c82834ca14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/static/addmarks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0002_auto_20200108_0914.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0003_remove_studentinfo_city.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0004_addmarks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0005_auto_20200110_0931.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0006_auto_20200110_0939.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0007_auto_20200110_0943.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0008_auto_20200110_1011.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studentinfo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentinfo/settings.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VjNBhgXg6l26poqZcpNYmBFR4u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9469cd6-3cae-4e40-98e9-92c82834ca14" name="Default Changelist" comment="" />
+      <created>1577419084021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577419084021</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="329" y="97" key="com.intellij.ide.util.TipDialog" timestamp="1578019930055">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="329" y="97" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1578019930055" />
+  </component>
+</project>

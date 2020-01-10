@@ -5,6 +5,11 @@
 
 <body>
 <H1>Registration page</H1>
+<style>
+ body {
+  background-color: lightblue;
+}
+</style>
 
 <form action="/student/registration/" method="POST">{% csrf_token %}
 
@@ -13,7 +18,7 @@
 </p>
 <input name="firstname" type="text">
 <p>
-    last name:
+         last name:
 </p>
 <input name="lastname" type="text">
 <p>

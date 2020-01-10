@@ -7,9 +7,14 @@
 <h2>
     login here
 </h2>
-    <form action="/student/login/" method="POST">{% csrf_token %}
+<style>
+ body {
+  background-color: lightblue;
+}
+</style>
+    <form action ="/student/login/" method="POST">{% csrf_token %}
 email:<br>
- <input type="email" name="email">
+ <input type="text" name="email">
   <br>
 password:<br>
   <input type="password" name="pwd">
