@@ -15,6 +15,19 @@ class studentinfo(models.Model):
         return str(self.firstname)
 
 
+class addmarks(models.Model):
+    id_no = models.IntegerField(null=True, blank=True)
+    firstname = models.CharField(max_length=20, null=True, blank=True)
+    lastname = models.CharField(max_length=20, null=True, blank=True)
+    dateofexam = models.DateField(max_length=30, null=True, blank=True)
+    maths = models.IntegerField(null=True, blank=True)
+    physics = models.IntegerField(null=True, blank=True)
+    chemistry = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.id_no)
+
+
 
 
 

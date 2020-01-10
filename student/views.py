@@ -42,3 +42,21 @@ def markslist(request):
 
 def marksview(request):
     return render(request, 'marksview.html')
+
+def StuMarks(request):
+    print(request)
+    if request.method == "POST":
+        print("its a post method")
+        student_object = addmarks.objects.create()
+        student_object.id_no = request.POST["id_no"]
+        student_object.firstname = request.POST["firstname"]
+        student_object.lastname = request.POST["lastname"]
+        student_object.dateofexam = request.POST["dateofexam"]
+        student_object.maths = request.POST["maths"]
+        student_object.physics = request.POST["physics"]
+        student_object.chemistry = request.POST["chemistry"]
+        print("student_object before")
+        student_object.save()
+        print("student_object after")
+
+    return render(request, 'addmarks.html')
