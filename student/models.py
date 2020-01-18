@@ -10,7 +10,6 @@ class studentinfo(models.Model):
     password = models.CharField(max_length=20, null=True, blank=True)
     dob = models.DateField(max_length=20, null=True, blank=True)
     gender = models.CharField(max_length=20, null=True, blank=True)
-
     def __str__(self):
         return str(self.firstname)
 
@@ -26,6 +25,7 @@ class addmarks(models.Model):
 
     def __str__(self):
         return str(self.id_no)
+
 
 
 

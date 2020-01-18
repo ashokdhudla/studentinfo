@@ -17,7 +17,6 @@ def login(request):
             print("invalid emil or password")
     return render(request, 'login.html')
 
-
 def registration(request):
     print(request)
     if request.method == "POST":
