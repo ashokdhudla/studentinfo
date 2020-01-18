@@ -5,21 +5,6 @@ from django.contrib import messages
 
 # Create your views here.
 
-
-# def login(request):
-#     print(request)
-#     if request.method == "POST":
-#         print("its a post method")
-#         email = request.POST["email"]
-#         password = request.POST["pwd"]
-#         student_object = studentinfo.objects.filter(email=email, password=password)
-#         if student_object:
-#             messages.success(request, "your loged in")
-#             print("email and password")
-#         else:
-#             print("invalid emil or password")
-#             messages.error(request, "invalid emil or password")
-#     return render(request, 'login.html')
 def login(request):
     if request.method == 'POST':
         form = AuthenticationForm(request.POST)
