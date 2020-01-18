@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9469cd6-3cae-4e40-98e9-92c82834ca14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/addmarks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student/migrations/0002_auto_20200108_0914.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student/migrations/0003_remove_studentinfo_city.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student/migrations/0004_addmarks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student/migrations/0005_auto_20200110_0931.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student/migrations/0006_auto_20200110_0939.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student/migrations/0007_auto_20200110_0943.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student/migrations/0008_auto_20200110_1011.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/static/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studentinfo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentinfo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +54,19 @@
       <updated>1577419084021</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="329" y="97" key="com.intellij.ide.util.TipDialog" timestamp="1578019930055">
