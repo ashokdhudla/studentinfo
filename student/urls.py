@@ -9,6 +9,7 @@ urlpatterns = [
     path('markslist/', views.markslist),
     path('marksview/', views.marksview),
     path('addstumarks/', views.StuMarks),
+    path('allusers/', views.Users),
 ]
 
 
