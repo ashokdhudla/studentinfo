@@ -1,21 +1,43 @@
-from django.shortcuts import render
+from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import render, redirect
 from .models import *
+from django.contrib import messages
 
 # Create your views here.
 
 
+# def login(request):
+#     print(request)
+#     if request.method == "POST":
+#         print("its a post method")
+#         email = request.POST["email"]
+#         password = request.POST["pwd"]
+#         student_object = studentinfo.objects.filter(email=email, password=password)
+#         if student_object:
+#             messages.success(request, "your loged in")
+#             print("email and password")
+#         else:
+#             print("invalid emil or password")
+#             messages.error(request, "invalid emil or password")
+#     return render(request, 'login.html')
 def login(request):
-    print(request)
-    if request.method == "POST":
-        print("its a post method")
-        email = request.POST["email"]
-        password = request.POST["pwd"]
+    if request.method == 'POST':
+        form = AuthenticationForm(request.POST)
+        email = request.POST['email']
+        password = request.POST['pwd']
         student_object = studentinfo.objects.filter(email=email, password=password)
-        if student_object:
-            print("email and password")
+
+        if student_object is not None:
+            if student_object:
+                login(request, student_object)
+                return redirect('index')
         else:
-            print("invalid emil or password")
-    return render(request, 'login.html')
+            messages.error(request, 'username or password not correct')
+            return redirect('login')
+
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'form': form})
 
 
 def registration(request):
@@ -60,3 +82,9 @@ def StuMarks(request):
         print("student_object after")
 
     return render(request, 'addmarks.html')
+
+
+def Users(requst):
+    student_list = studentinfo.objects.all()
+    print(student_list)
+    return render(requst,'alluser.html')

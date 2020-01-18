@@ -12,7 +12,7 @@ class studentinfo(models.Model):
     gender = models.CharField(max_length=20, null=True, blank=True)
 
     def __str__(self):
-        return str(self.firstname)
+        return str(self.email)
 
 
 class addmarks(models.Model):

@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9469cd6-3cae-4e40-98e9-92c82834ca14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/markslist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/static/alluser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static/addmarks.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/addmarks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/static/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/views.py" afterDir="false" />
     </list>
@@ -34,7 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Programming/Python_Hero" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -62,9 +62,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="97" key="com.intellij.ide.util.TipDialog" timestamp="1578019930055">
+    <state x="421" y="115" key="FileChooserDialogImpl" timestamp="1579235377952">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="329" y="97" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1578019930055" />
+    <state x="421" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1579235377952" />
+    <state x="329" y="97" key="com.intellij.ide.util.TipDialog" timestamp="1579235260570">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="329" y="97" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1579235260570" />
   </component>
 </project>
