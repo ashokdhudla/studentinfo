@@ -7,22 +7,16 @@ from django.contrib import messages
 
 def login(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request.POST)
+        print("post method calling")
         email = request.POST['email']
         password = request.POST['pwd']
         student_object = studentinfo.objects.filter(email=email, password=password)
-
-        if student_object is not None:
-            if student_object:
-                login(request, student_object)
-                return redirect('index')
+        if student_object:
+            print("email and password")
         else:
-            messages.error(request, 'username or password not correct')
-            return redirect('login')
-
-    else:
-        form = AuthenticationForm()
-    return render(request, 'login.html', {'form': form})
+            print("invalid email or password")
+            return render(request, 'login.html', {"error": "invalid email or password "})
+    return render(request, 'login.html')
 
 def registration(request):
     print(request)
