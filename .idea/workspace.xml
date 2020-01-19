@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f9469cd6-3cae-4e40-98e9-92c82834ca14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0002_auto_20200108_0914.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0002_studentinfo_city.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0003_auto_20200108_0944.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0003_remove_studentinfo_city.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0004_addmarks.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0005_auto_20200110_0931.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0006_auto_20200110_0939.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0007_auto_20200110_0943.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0008_auto_20200110_1011.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/migrations/0009_merge_20200110_1104.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
