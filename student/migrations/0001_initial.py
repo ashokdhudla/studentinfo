@@ -23,6 +23,7 @@ class Migration(migrations.Migration):
                 ('password', models.CharField(blank=True, max_length=20, null=True)),
                 ('dob', models.DateField(blank=True, max_length=20, null=True)),
                 ('gender', models.CharField(blank=True, max_length=20, null=True)),
+
             ],
         ),
     ]

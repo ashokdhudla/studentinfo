@@ -2,7 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9469cd6-3cae-4e40-98e9-92c82834ca14" name="Default Changelist" comment="">
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/static/static/alluser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static/addmarks.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/addmarks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/login.html" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/static/addmarks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0002_auto_20200108_0914.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0003_remove_studentinfo_city.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0004_addmarks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0005_auto_20200110_0931.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0006_auto_20200110_0939.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0007_auto_20200110_0943.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/migrations/0008_auto_20200110_1011.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/static/registration.html" afterDir="false" />
+>>>>>>> 64b63b38fd362eef806aeba6f950381519111735
+      <change beforePath="$PROJECT_DIR$/student/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studentinfo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentinfo/settings.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/student/migrations/0002_auto_20200108_0914.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0002_studentinfo_city.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0003_auto_20200108_0944.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0003_remove_studentinfo_city.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0004_addmarks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0005_auto_20200110_0931.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0006_auto_20200110_0939.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0007_auto_20200110_0943.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0008_auto_20200110_1011.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/migrations/0009_merge_20200110_1104.py" beforeDir="false" />
+>>>>>>> 587fc15f2f8afec9daf0d3d87d3a30078b6cbb5c
+>>>>>>> 597b1660b459e5d0bf688bf8cf6216905bb4410c
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +67,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Programming/Python_Hero" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -69,9 +108,13 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="97" key="com.intellij.ide.util.TipDialog" timestamp="1578019930055">
+    <state x="421" y="115" key="FileChooserDialogImpl" timestamp="1579235377952">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="329" y="97" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1578019930055" />
+    <state x="421" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1579235377952" />
+    <state x="329" y="97" key="com.intellij.ide.util.TipDialog" timestamp="1579235260570">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="329" y="97" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1579235260570" />
   </component>
 </project>
