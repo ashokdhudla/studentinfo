@@ -28,6 +28,8 @@
       <change beforePath="$PROJECT_DIR$/studentinfo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentinfo/settings.py" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/student/migrations/0002_auto_20200108_0914.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/student/migrations/0002_studentinfo_city.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/student/migrations/0003_auto_20200108_0944.py" beforeDir="false" />
@@ -39,6 +41,7 @@
       <change beforePath="$PROJECT_DIR$/student/migrations/0008_auto_20200110_1011.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/student/migrations/0009_merge_20200110_1104.py" beforeDir="false" />
 >>>>>>> 587fc15f2f8afec9daf0d3d87d3a30078b6cbb5c
+>>>>>>> 597b1660b459e5d0bf688bf8cf6216905bb4410c
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
