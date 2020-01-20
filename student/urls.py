@@ -10,6 +10,10 @@ urlpatterns = [
     path('marksview/', views.marksview),
     path('addstumarks/', views.StuMarks),
     path('allusers/', views.Users),
+    path('home/', views.home),
+    path('^', views.index),
+
+
 ]
 
 
