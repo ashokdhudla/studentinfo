@@ -1,28 +1,26 @@
+{% load static %}
 <html>
+
 <head>
-    <title>Student Info App</title>
+<title>Student Info App</title>
+    <link rel="stylesheet" type="text/css" href="/static/style1.css">
 </head>
 <body>
-<center>
-<h2>
-    login here
-</h2>
-<p><font color="red"> {{error}} </font> </p>
-<style>
- body {
-  background-color: lightblue;
-}
-</style>
-    <form action ="/student/login/" method="POST">{% csrf_token %}
-email:<br>
- <input type="text" name="email">
-  <br>
-password:<br>
-  <input type="password" name="pwd">
-  <br><br>
-  <input type="submit" value="login">
-</form>
+    <div class="loginbox">
+    <img src="/static/images/avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <p><font color="red"> {{error}} </font> </p>
+        <form action ="/student/login/" method="POST">{% csrf_token %}
+            <p>Email Id</p>
+            <input type="text" name="email" placeholder="Enter Email">
+            <p>Password</p>
+            <input type="password" name="pwd" placeholder="Enter Password">
+            <input type="submit" name="submit" value="Login">
 
-</center>
+        </form>
+
+    </div>
+
 </body>
+
 </html>
