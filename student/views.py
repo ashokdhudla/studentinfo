@@ -13,6 +13,7 @@ def login(request):
         student_object = studentinfo.objects.filter(email=email, password=password)
         if student_object:
             print("email and password")
+            return render(request,'home.html', {"studentinfo": student_object[0]})
         else:
             print("invalid email or password")
             return render(request, 'login.html', {"error": "invalid email or password "})
@@ -66,3 +67,11 @@ def Users(requst):
     student_list = studentinfo.objects.all()
     print(student_list)
     return render(requst,'alluser.html')
+
+def home(request):
+    print(request)
+    return render(request,'home.html')
+
+def index(request):
+    print(request)
+    return render(request, 'index.html')
