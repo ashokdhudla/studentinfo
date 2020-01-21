@@ -12,8 +12,6 @@ urlpatterns = [
     path('allusers/', views.Users),
     path('home/', views.home),
     path('^', views.index),
-
-
 ]
 
 

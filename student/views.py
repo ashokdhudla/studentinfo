@@ -68,11 +68,9 @@ def Users(request):
     print(student_list)
     return render(request, 'alluser.html')
 
-
 def home(request):
     print(request)
     return render(request, 'home.html')
-
 
 def index(request):
     print(request)
