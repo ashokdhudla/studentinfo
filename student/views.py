@@ -33,7 +33,6 @@ def registration(request):
         print("student_object before")
         student_object.save()
         print("student_object after")
-
     return render(request, 'registration.html')
 
 
