@@ -1,8 +1,8 @@
 <html>
 <head>
-    <title>Student Info</title>
+<title> Registration page </title>
+    <link rel="stylesheet" type="text/css" href="/static/style3.css">
 </head>
-
 <body>
 <H1>Registration page</H1>
 <p><font color="green"> {{success}} </font></p>
@@ -51,7 +51,33 @@
 <ul>
  <li><a href="/student/login/">Login</a></li>
 </ul>
+  <form action="/student/registration/" method="POST">{% csrf_token %}
+
+    <div id="login-box">
+      <div class="left-box">
+        <h1> Registar Here</h1>
+
+          <input type="text" name="Firstname" placeholder="First Name"/>
+          <input type="text" name="Lastname" placeholder="Last Name"/>
+          <input type="text" name="Email" placeholder="Email"required/>
+          <input type="password" name="Password" placeholder="Password" minlength="8"/>
+          <input type="date" name ="birthday" type="date"/><br><br>
+          <input name="gender" type="radio" value="Male">Male
+          <input name="gender" type="radio" value="female">Female
+          <input name="gender" type="radio" value="Other">Other <br><br>
+          <input name="submit" type="submit" value="Submit">
+          <input name="reset" type="reset" value="Reset">
+
+
+      </div>
+    </div>
+
+  </form>
+
+      <a href ="{url 'login'}">Login </a>
+
+
+
 
 </body>
-
 </html>
