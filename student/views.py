@@ -33,12 +33,10 @@ def registration(request):
         print("student_object before")
         student_object.save()
         print("student_object after")
-<<<<<<< HEAD
+
         if student_object.save:
             print("successfully registerd")
             return render(request, 'registration.html',{"success": "successfully registerd "})
-=======
->>>>>>> 1f0a224e7fd48c04bf802e4c0915eab528fb6028
     return render(request, 'registration.html')
 
 
