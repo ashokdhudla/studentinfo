@@ -1,29 +1,29 @@
 <html>
 <head>
-    <title>Home </title>
+    <title> Home </title>
     <link href="/static/style2.css" rel="stylesheet" type="text/css">
 </head> 
 <body>
-    <header>
-        
-    <div class="row">
+
+
+        <div class="row">
+           <ul class="main-nav">
+                <li class="active"><a href="/student/home"> HOME </a></li>
+                <li><a href="/student/addstumarks"> Add Marks </a></li>
+                <li><a href="/student/marksview"> View Marks </a></li>
+                <li><a href="/student/markslist"> My Details  </a></li>
+                <li><a href="/student/login"> Log Out </a></li>
+          </ul>
 
         </div>
-            
-    <ul class="main-nav">    
-        <li class="active"><a href="/static/home"> HOME </a></li>
-        <li><a href="/static/addmarks.html"> Add Marks </a></li>
-        <li><a href="/static/marksview.html"> View Marks </a></li>
-        <li><a href="/static/markslist.html"> My Details  </a></li>
-        <li><a href="/static/login.html"> Log Out </a></li>
-    </ul>    
-        
-    </div>
-        
-    
-    </header>
+        <img src="/static/images/h.webp"ome>
+        <h1>welcome to {{studentinfo.firstname}}.{{studentinfo.lastname}}</h1>
 
 
-        
-</body>    
+
+{% block content %}
+
+    {% endblock content %}
+
+</body>
 </html>
