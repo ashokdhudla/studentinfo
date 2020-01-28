@@ -86,3 +86,9 @@ input[type="reset"]:focus
     transition: 0.2s ease;
 }
 
+a {
+  color: red;
+  font-size:25px;
+  background-color: transparent;
+  text-decoration: none;
+}

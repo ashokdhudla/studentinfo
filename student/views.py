@@ -45,6 +45,7 @@ def markslist(request):
 
 
 def marksview(request):
+
     return render(request, 'marksview.html')
 
 def StuMarks(request):

@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'home.html' %}
+{% block content %}
+
 <style>
 table, th, td {
   border: 1px solid black;
@@ -15,8 +15,8 @@ table#t01 {
   background-color: #f1f1c1;
 }
 </style>
-</head>
-<body>
+
+
 
 <h2>Student marks list</h2>
 
@@ -60,5 +60,4 @@ table#t01 {
     <input type="submit" value="submit">
 </p>
 
-</body>
-</html>
+{%endblock content%}

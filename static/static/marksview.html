@@ -1,17 +1,11 @@
-<html>
-<head>
-    <title>marks view</title>
-</head>
-<body>
-<center>
-<h2>
-   marks view
-</h2>
+{% extends 'home.html' %}
+{% block content %}
 <style>
  body {
   background-color: lightblue;
 }
 </style>
+<center>
 ID  <input type="id" name="id">
   <br><br>
 DOB <input type="Date" name="DOB">
@@ -20,3 +14,5 @@ DOB <input type="Date" name="DOB">
 </center>
 </body>
 </html>
+
+{%endblock content%}
