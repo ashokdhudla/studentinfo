@@ -99,3 +99,9 @@ a
 
 }
 
+a {
+  color: red;
+  font-size:25px;
+  background-color: transparent;
+  text-decoration: none;
+}

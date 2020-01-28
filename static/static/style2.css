@@ -1,8 +1,3 @@
-*
-{
-    margin: 0;
-    padding: 0;
-}
 
 body
 {
@@ -18,36 +13,28 @@ body
     margin: auto;
 }
 
-.main-nav
-{
-    float: right;
-    list-style: none;
-    margin-top: 30px;
-}
-.main-nav li
-{
-    display: inline-block;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: blue;
 }
 
-.main-nav li.active a
-{
-    border: 1px solid white;
-
+li {
+  float: left;
 }
 
-.main-nav li a:hover
-{
-    border: 1px solid white;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-
-.main-nav li a
-{
-    color: white;
-    text-decoration: none;
-    padding: 5px 20px;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
+li a:hover {
+  background-color: #111;
 }
 
 
