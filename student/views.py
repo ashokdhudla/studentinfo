@@ -57,9 +57,6 @@ def StuMarks(request):
         print("its a post method")
         student_object = addmarks.objects.create()
         student_object.id_no = request.session['user']
-        student_object.firstname = request.POST["firstname"]
-        student_object.lastname = request.POST["lastname"]
-        student_object.dateofexam = request.POST["dateofexam"]
         student_object.maths = request.POST["maths"]
         student_object.physics = request.POST["physics"]
         student_object.chemistry = request.POST["chemistry"]
@@ -84,10 +81,9 @@ def index(request):
     return render(request, 'index.html')
 
 
-
 def details(request):
     print(request)
-    # student_details = studentinfo.objects.all()
     userid = request.session["user"]
     student_details = studentinfo.objects.filter(id=userid)
-    return render(request, 'my_details.html', {"studentsinfo": student_details})
+    return render(request, 'mydetails.html', {"studentsinfo": student_details})
+
