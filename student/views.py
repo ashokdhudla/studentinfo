@@ -83,11 +83,6 @@ def index(request):
 
 def details(request):
     print(request)
-
-
-
-
-    # student_details = studentinfo.objects.all()
     userid = request.session["user"]
     student_details = studentinfo.objects.filter(id=userid)
     return render(request, 'mydetails.html', {"studentsinfo": student_details})

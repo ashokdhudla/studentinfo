@@ -24,6 +24,7 @@ table#t01 {
     <th>Date Of Birth</th>
 	<th>Gender</th>
 	</tr>
+    {% for studentinfo in studentsinfo %}
   <tr>
     <td>{{studentinfo.firstname}}</td>
     <td>{{studentinfo.lastname}}</td>
@@ -31,6 +32,7 @@ table#t01 {
 	<td>{{studentinfo.dob}} </td>
 	<td>{{studentinfo.gender}} </td>
   </tr>
+    {% endfor %}
 
 </table>
 
