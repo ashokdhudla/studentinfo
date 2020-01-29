@@ -45,8 +45,11 @@ def markslist(request):
 
 
 def marksview(request):
+    userid = request.session["user"]
+    student_marks = addmarks.objects.filter(id_no=userid)
+    return render(request, 'marksview.html', {"studentsinfo": student_marks})
 
-    return render(request, 'marksview.html')
+
 
 def StuMarks(request):
     print(request)
