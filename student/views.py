@@ -57,9 +57,6 @@ def StuMarks(request):
         print("its a post method")
         student_object = addmarks.objects.create()
         student_object.id_no = request.session['user']
-        student_object.firstname = request.POST["firstname"]
-        student_object.lastname = request.POST["lastname"]
-        student_object.dateofbirth = request.POST["dateofbirth"]
         student_object.maths = request.POST["maths"]
         student_object.physics = request.POST["physics"]
         student_object.chemistry = request.POST["chemistry"]
