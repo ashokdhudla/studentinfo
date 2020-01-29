@@ -13,6 +13,7 @@ def login(request):
         student_object = studentinfo.objects.filter(email=email, password=password)
         if student_object:
             print("email and password")
+            request.session["user"] = student_object[0].id
             return render(request, 'home.html', {"studentinfo": student_object[0]})
         else:
             print("invalid email or password")
@@ -52,7 +53,7 @@ def StuMarks(request):
     if request.method == "POST":
         print("its a post method")
         student_object = addmarks.objects.create()
-        student_object.id_no = request.POST["id_no"]
+        student_object.id_no = request.session['user']
         student_object.firstname = request.POST["firstname"]
         student_object.lastname = request.POST["lastname"]
         student_object.dateofexam = request.POST["dateofexam"]
@@ -83,5 +84,7 @@ def index(request):
 
 def details(request):
     print(request)
-    student_details = studentinfo.objects.all()
-    return render(request, 'my_details.html', {"studentinfo": student_details[0]})
+    # student_details = studentinfo.objects.all()
+    userid = request.session["user"]
+    student_details = studentinfo.objects.filter(id=userid)
+    return render(request, 'my_details.html', {"studentsinfo": student_details})
