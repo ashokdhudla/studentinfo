@@ -1,35 +1,35 @@
 <html>
 <head>
 <title> Registration page </title>
+
     <link rel="stylesheet" type="text/css" href="/static/style3.css">
 </head>
 <body>
 
 
-<center>
-<p><font color="thick blue"> {{success}} </font></p>
-    </center>
-
-<li>><a href="/student/login" >Login</a></li>
+<li><a href="/student/login" >Login</a></li>
 <form action="/student/registration/" method="POST">{% csrf_token %}
 
     <div id="login-box">
       <div class="left-box">
-        <h1> Register Here</h1>
+                <center>
+<p><font color="thick blue"> {{success}}</font>  </p>
+        </center>
 
+        <h1> Registar Here</h1>
           <input type="text" name="firstname" placeholder="First Name"/>
           <input type="text" name="lastname" placeholder="Last Name"/>
           <input type="text" name="email" placeholder="Email"required/>
           <input type="password" name="password" placeholder="Password" minlength="8"/>
           <input type="date" name ="birthday" type="date"/><br><br>
           <input name="gender" type="radio" value="Male">Male
-          <input name="gender" type="radio" value="female">Female
+          <input name="gender" type="radio" value="Female">Female
           <input name="gender" type="radio" value="Other">Other <br><br>
           <input name="submit" type="submit" value="Submit">
           <input name="reset" type="reset" value="Reset">
 
 
-      </div>
+       </div>
     </div>
 
   </form>

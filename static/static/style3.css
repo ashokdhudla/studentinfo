@@ -85,6 +85,19 @@ input[type="reset"]:focus
     background: #ff5722;
     transition: 0.2s ease;
 }
+li
+{
+ list-style: none;
+ padding:20px;
+}
+a
+{
+  color: red;
+   font-size:25px;
+  background-color: transparent;
+  text-decoration: none;
+
+}
 
 a {
   color: red;
