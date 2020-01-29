@@ -33,10 +33,9 @@ def registration(request):
         print("student_object before")
         student_object.save()
         print("student_object after")
-
         if student_object.save:
             print("successfully registerd")
-            return render(request, 'registration.html',{"success": "successfully registerd "})
+        return render(request, 'registration.html', {"success": "successfully registerd "})
     return render(request, 'registration.html')
 
 
@@ -85,3 +84,4 @@ def details(request):
     print(request)
     student_details = studentinfo.objects.all()
     return render(request, 'mydetails.html', {"studentinfo": student_details[0]})
+

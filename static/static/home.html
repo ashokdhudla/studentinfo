@@ -2,28 +2,27 @@
 <head>
     <title> Home </title>
     <link href="/static/style2.css" rel="stylesheet" type="text/css">
+
 </head> 
 <body>
 
+<div class="row">
+    <ul class="main-nav">
+        <li class="active"><a href="/student/home"> HOME </a></li>
+        <li><a href="/student/addstumarks"> Add Marks </a></li>
+        <li><a href="/student/marksview"> View Marks </a></li>
+        <li><a href="/student/mydetails"> My Details  </a></li>
+        <li style="float:right"><a href="/student/login"> Log Out </a></li>
+    </ul>
 
-        <div class="row">
-           <ul class="main-nav">
-                <li class="active"><a href="/student/home"> HOME </a></li>
-                <li><a href="/student/addstumarks"> Add Marks </a></li>
-                <li><a href="/student/marksview"> View Marks </a></li>
-                <li><a href="/student/mydetails"> My Details  </a></li>
-                <li style="float:right"><a href="/student/login"> Log Out </a></li>
-          </ul>
+</div>
 
-        </div>
-
-        <h1>welcome to {{studentinfo.firstname}}.{{studentinfo.lastname}}</h1>
-
-
-
+<h1>Well Come {{studentinfo.firstname}}.{{studentinfo.lastname}}</h1>
+        
 {% block content %}
 
-    {% endblock content %}
+
+{% endblock content %}
 
 </body>
 </html>
