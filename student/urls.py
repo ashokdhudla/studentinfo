@@ -12,6 +12,7 @@ urlpatterns = [
     path('my_details/', views.details),
     path('allusers/', views.Users),
     path('home/', views.home),
+    path('forgot_password/', views.password),
     path('^', views.index),
 ]
 
