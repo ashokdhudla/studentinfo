@@ -17,6 +17,7 @@ def user_login_required(f):
     wrap.__name__ = f.__name__
     return wrap
 
+
 def login(request):
     if request.method == 'POST':
         print("post method calling")
@@ -33,6 +34,7 @@ def login(request):
             return render(request, 'login.html', {"error": "invalid email or password "})
 
     return render(request, 'login.html')
+
 
 def registration(request):
     print(request)
@@ -64,6 +66,7 @@ def marksview(request):
     return render(request, 'marksview.html', {"studentsinfo": student_marks})
 
 
+
 @user_login_required
 def StuMarks(request):
     print(request)
@@ -86,6 +89,7 @@ def Users(request):
     print(student_list)
     return render(request, 'alluser.html')
 
+
 @user_login_required
 def home(request):
     print(request)
@@ -93,6 +97,7 @@ def home(request):
     print(student_object)
     return render(request, 'home.html', {"studentinfo": student_object[0]})
     # return render(request, 'home.html')
+
 
 def index(request):
     print(request)
@@ -103,7 +108,23 @@ def details(request):
     print(request)
     userid = request.session["user"]
     student_details = studentinfo.objects.filter(id=userid)
-    return render(request, 'mydetails.html', {"studentsinfo": student_details})
+    return render(request, 'my_details.html', {"studentsinfo": student_details})
+
+
+def password(request):
+    print(request)
+    if request.method == 'POST':
+        print("post method calling")
+        email = request.POST['email']
+        student_pass = studentinfo.objects.filter(email=email)
+        if student_pass:
+            print("email")
+            return render(request, 'forgot_password.html', {"studentinfo": f'Password sent to {student_pass}'} )
+        else:
+            print("invalid email ")
+            return render(request, 'forgot_password.html', {"error": "invalid email"})
+
+    return render(request, 'forgot_password.html')
 
 def logout(request):
     print(request,"logout calling")
