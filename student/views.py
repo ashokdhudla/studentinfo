@@ -1,9 +1,21 @@
 from django.contrib.auth.forms import AuthenticationForm
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
+
 from .models import *
 from django.contrib import messages
 
 # Create your views here.
+def user_login_required(f):
+    def wrap(request, *args, **kwargs):
+        # this check the session if userid key exist, if not it will redirect
+        # to login page
+        if 'user' not in request.session.keys():
+            return HttpResponseRedirect("/student/login")
+        return f(request, *args, **kwargs)
+
+    wrap.__doc__ = f.__doc__
+    wrap.__name__ = f.__name__
+    return wrap
 
 
 def login(request):
@@ -15,10 +27,12 @@ def login(request):
         if student_object:
             print("email and password")
             request.session["user"] = student_object[0].id
-            return render(request, 'home.html', {"studentinfo": student_object[0]})
+            # return render(request, 'home.html', {"studentinfo": student_object[0]})
+            return HttpResponseRedirect("/student/home/")
         else:
             print("invalid email or password")
             return render(request, 'login.html', {"error": "invalid email or password "})
+
     return render(request, 'login.html')
 
 
@@ -45,13 +59,15 @@ def registration(request):
 def markslist(request):
     return render(request, 'markslist.html')
 
-
+@user_login_required
 def marksview(request):
     userid = request.session["user"]
     student_marks = addmarks.objects.filter(id_no=userid)
     return render(request, 'marksview.html', {"studentsinfo": student_marks})
 
 
+
+@user_login_required
 def StuMarks(request):
     print(request)
     if request.method == "POST":
@@ -74,16 +90,20 @@ def Users(request):
     return render(request, 'alluser.html')
 
 
+@user_login_required
 def home(request):
     print(request)
-    return render(request, 'home.html')
+    student_object=studentinfo.objects.filter(id=request.session["user"])
+    print(student_object)
+    return render(request, 'home.html', {"studentinfo": student_object[0]})
+    # return render(request, 'home.html')
 
 
 def index(request):
     print(request)
     return render(request, 'index.html')
 
-
+@user_login_required
 def details(request):
     print(request)
     userid = request.session["user"]
@@ -105,4 +125,11 @@ def password(request):
             return render(request, 'forgot_password.html', {"error": "invalid email"})
 
     return render(request, 'forgot_password.html')
+
+def logout(request):
+    print(request,"logout calling")
+    del request.session["user"]
+    return HttpResponseRedirect("/student/login/")
+
+
 
