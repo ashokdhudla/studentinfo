@@ -13,6 +13,7 @@ urlpatterns = [
     path('home/', views.home),
     path('^', views.index),
     path('mydetails/',views.details),
+    path('logout/',views.logout),
 ]
 
 
