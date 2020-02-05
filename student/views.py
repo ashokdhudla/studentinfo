@@ -99,7 +99,7 @@ def password(request):
         student_pass = studentinfo.objects.filter(email=email)
         if student_pass:
             print("email")
-            return render(request, 'forgot_password.html', {"studentinfo": f'Password sent to {student_pass}'} )
+            return render(request, 'forgot_password.html', {"studentinfo": f'Password sent to {student_pass}'})
         else:
             print("invalid email ")
             return render(request, 'forgot_password.html', {"error": "invalid email"})
