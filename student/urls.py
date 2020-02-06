@@ -15,6 +15,9 @@ urlpatterns = [
     path('^', views.index),
     path('mydetails/',views.details),
     path('logout/',views.logout),
+    path('staff/',views.staff_names),
+    path('subject/',views.sub_name),
+    path('staffdetails/',views.staffdetails)
 ]
 
 
