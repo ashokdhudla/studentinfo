@@ -1,0 +1,83 @@
+{% extends 'home.html' %}
+{% block content %}
+</head>
+<style>
+table,th,td
+ {
+ border:1px solid black;
+
+ }
+th,td
+{
+padding:15px;
+}
+</style>
+<body>
+<table style="..">
+    <tr>
+    <th>
+        YEAR/SEMESTER
+    </th>
+    <th>
+        PRESENT FEE(RS)
+    </th>
+    </tr>
+        <tr>
+        <td>
+         1st year
+        </td>
+        <td>
+          {{Fee.first}}
+        </td>
+        </tr><tr>
+        <td>
+         2nd Semester
+        </td>
+
+        <td>
+          {{Fee.second}}
+        </td>
+
+    </tr><tr>
+        <td>
+         3rd Semester
+        </td>
+
+        <td>
+          {{Fee.third}}
+        </td>
+    </tr><tr>
+        <td>
+         4th Semester
+        </td>
+
+        <td>
+          {{Fee.fourth}}
+        </td>
+    </tr><tr>
+        <td>
+         5th Semester
+        </td>
+        <td>
+          {{Fee.fifth}}
+        </td>
+    </tr><tr>
+        <td>
+         6th Semester
+        </td>
+        <td>
+         {{Fee.sixth}}
+        </td>
+    </tr></tr><tr>
+        <td>
+         7th Semester
+        </td>
+        <td>
+         {{Fee.seventh}}
+        </td>
+    </tr>
+
+</table><br>
+
+{%endblock content%}
+</body>

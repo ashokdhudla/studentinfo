@@ -9,11 +9,15 @@ urlpatterns = [
     path('markslist/', views.markslist),
     path('marksview/', views.marksview),
     path('addstumarks/', views.StuMarks),
-    path('allusers/', views.Users),
+    path('alluser/', views.Users),
     path('home/', views.home),
     path('forgot_password/', views.password),
     path('^', views.index),
-    path('mydetails/',views.details),
+    path('mydetails/', views.details),
+    path('fee/', views.fees),
+    path('departments/', views.depart),
+    path('presentfee/', views.presentfees),
+    path('logout/', views.logout),
 ]
 
 

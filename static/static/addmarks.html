@@ -1,45 +1,19 @@
 {% extends 'home.html' %}
 {% block content %}
 
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-</head>
-<body>
 
 <h2>Add Marks</h2>
 <form action="/student/addstumarks/" method="POST">{% csrf_token %}
+    <center>
 
-<table>
-  <tr>
+     <span>maths</span>  <input type="number" name="maths" min="1" max="100"><br><br>
+   <span>physics</span>  <input type="number" name="physics" min="1" max="100"><br><br>
+   <span>chemistry</span>  <input type="number" name="chemistry" min="1" max="100"><br><br>
+        <input name="submit" type="submit" value="Submit">
+       <input name="reset" type="reset" value="Reset">
 
-    <th>Maths</th>
-	<th>Physics</th>
-	<th>Chemistry</th>
-  </tr>
-  <tr>
-      <td><input name="maths" type="text"size="5"></td>
-      <td><input name="physics" type="text"size="5"></td>
-      <td><input name="chemistry" type="text"size="5"></td>
-      </tr>
-</table>
-<tr></td><input name="submit" type="submit" value="Submit">
-       <input name="reset" type="reset" value="Reset"></td>
-  </tr>
+</center>
  </form>
 
 {%endblock content%}
