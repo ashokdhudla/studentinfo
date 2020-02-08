@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>staff</title>
-</head>
-<body>
+{% extends 'admin.html' %}
+{% block content %}
+
+
 
  <h1> staff details</h1>
- <center>
+<center>
   <form action ="/student/staff/" method="POST">{% csrf_token %}
           <input type="text" name="firstname" placeholder="First Name"/><br><br>
           <input type="text" name="lastname" placeholder="Last Name"/><br><br>
           <input type="text" name="email" placeholder="Email"/><br><br>
+      <select name="subject">
+<!--          <option value="network analysis">network analysis</option>-->
+          {% for subject in subjects %}
+          <option value="{{subject.id_no}}">{{subject.id_no}}-{{subject.subjectname}}</option>
+          {% endfor %}
+      </select>
           <input name="submit" type="submit" value="Submit">
-      </center>
+
   </form>
-</body>
-</html>
+</center>
+{%endblock content%}

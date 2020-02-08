@@ -25,7 +25,7 @@ class addmarks(models.Model):
         return str(self.id_no)
 
 class Subject(models.Model):
-    id_no = models.IntegerField(primary_key=True,blank=True)
+    id_no = models.AutoField(primary_key=True)
     subjectname = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
@@ -33,15 +33,14 @@ class Subject(models.Model):
 
 
 class staff(models.Model):
-    id_no = models.IntegerField(null=True, blank=True)
+    id = models.AutoField(primary_key=True)
     firstname = models.CharField(max_length=20, null=True, blank=True)
     lastname = models.CharField(max_length=20, null=True, blank=True)
     email = models.EmailField(max_length=30, null=True, blank=True)
     subject = models.ForeignKey(Subject,on_delete=models.CASCADE)
 
-
     def __str__(self):
-        return str(self.id_no)
+        return str(self.id)
 
 
 

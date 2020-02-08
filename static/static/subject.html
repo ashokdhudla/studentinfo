@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'admin.html' %}
+{% block content %}
+
+<h1> subjectName</h1>
+
+
 <center>
 
-<form action="/student/subject/" method="POST">{% csrf_token %}
+  <form action="/student/subject/" method="POST">{% csrf_token %}
      <input type="text" name="subjectname" placeholder="subject Name"/><br><br>
      <input name="submit" type="submit" value="Submit">
 
-</form>
+  </form>
     </center>
 
-</body>
-</html>
+{%endblock content%}

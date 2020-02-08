@@ -27,16 +27,14 @@ table#t01 {
    	</tr>
    {% for studentinfo in studentsinfo %}
 
-
+    <tr>
     <td>{{studentinfo.maths}}</td>
     <td>{{studentinfo.physics}}</td>
     <td>{{studentinfo.chemistry}}</td>
     <td><button onclick="myFunction()">Edit</button>
     <button onclick="myFunction()">Delete</button>
     </td>
-
-
-
+    </tr>
 
    {% endfor %}
 

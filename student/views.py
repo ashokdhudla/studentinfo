@@ -134,13 +134,18 @@ def logout(request):
 
 def staff_names(request):
     print(request)
+    if request.method == "GET":
+        subjects=Subject.objects.all()
+        return render(request, 'staff.html',{"subjects":subjects})
     if request.method == "POST":
         print("its a post method")
         staff_object = staff.objects.create()
         staff_object.firstname = request.POST["firstname"]
         staff_object.lastname = request.POST["lastname"]
         staff_object.email = request.POST["email"]
-        staff_object.subject = request.POST["subject"]
+        print("requst.post",request.POST["subject"])
+        staff_object.subject = Subject.objects.get(id_no=int(request.POST["subject"]))
+
         print("staff_object before")
         staff_object.save()
         print("staff_object after")
@@ -163,9 +168,13 @@ def sub_name(request):
 
 def staffdetails(request):
     print(request)
-    staff_details = staff.objects.all
+    staff_details = staff.objects.all()
     print(staff_details)
     return render(request, 'staffdetails.html', {"staffdetails": staff_details})
+
+
+def admin (request):
+    return render(request, 'admin.html')
 
 
 

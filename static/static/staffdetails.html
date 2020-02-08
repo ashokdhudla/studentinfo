@@ -1,3 +1,8 @@
+{% extends 'admin.html' %}
+{% block content %}
+
+
+
 <style>
 table, th, td {
   border: 1px solid black;
@@ -13,13 +18,7 @@ table#t01 {
 }
 </style>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+
 
 <table>
 
@@ -30,14 +29,14 @@ table#t01 {
     <th>subject</th>
    	</tr>
    {% for staff in staffdetails %}
-
+   <tr>
     <td>{{staff.firstname}}</td>
     <td>{{staff.lastname}}</td>
     <td>{{staff.email}}</td>
     <td>{{staff.subject}}</td>
 
-
+    </tr>
      {% endfor %}
 </table>
-</body>
-</html>
+
+{%endblock content%}
