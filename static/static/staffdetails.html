@@ -1,0 +1,42 @@
+{% extends 'admin.html' %}
+{% block content %}
+
+
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 50%;
+  background-color: #f1f1c1;
+}
+</style>
+
+
+
+<table>
+
+  <tr>
+    <th>firstname</th>
+    <th>lastneme</th>
+    <th>email</th>
+    <th>subject</th>
+   	</tr>
+   {% for staff in staffdetails %}
+   <tr>
+    <td>{{staff.firstname}}</td>
+    <td>{{staff.lastname}}</td>
+    <td>{{staff.email}}</td>
+    <td>{{staff.subject}}</td>
+
+    </tr>
+     {% endfor %}
+</table>
+
+{%endblock content%}
