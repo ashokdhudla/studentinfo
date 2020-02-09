@@ -157,7 +157,7 @@ def presentfees(request):
     print(request)
     present_fee = fee.objects.all()
     print(present_fee)
-    return render(request, 'presentfee.html', {"Fee": present_fee})
+    return render(request, 'presentfee.html', {"fee": present_fee})
 
 
 def depart(request):
