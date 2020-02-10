@@ -108,8 +108,8 @@ def index(request):
 def details(request):
     print(request)
     userid = request.session["user"]
-    student_details = studentinfo.objects.filter(id=userid)
-    return render(request, 'my_details.html', {"studentsinfo": student_details})
+    student_object = studentinfo.objects.filter(id=userid)
+    return render(request, 'my_details.html', {"studentsinfo": student_object})
 
 
 def password(request):
@@ -158,6 +158,52 @@ def presentfees(request):
     present_fee = fee.objects.all()
     print(present_fee)
     return render(request, 'presentfee.html', {"fee": present_fee})
+
+
+def staff_names(request):
+    print(request)
+    if request.method == "GET":
+        subjects = Subject.objects.all()
+        return render(request, 'staff.html', {"subjects": subjects})
+    if request.method == "POST":
+        print("its a post method")
+        staff_object = staff.objects.create()
+        staff_object.firstname = request.POST["firstname"]
+        staff_object.lastname = request.POST["lastname"]
+        staff_object.email = request.POST["email"]
+        print("requst.post", request.POST["subject"])
+        staff_object.subject = Subject.objects.get(id_no=int(request.POST["subject"]))
+
+        print("staff_object before")
+        staff_object.save()
+        print("staff_object after")
+
+    return render(request, 'staff.html')
+
+
+def sub_name(request):
+    print(request)
+    if request.method == "POST":
+        print("its a post method")
+        sub_object = Subject.objects.create()
+
+        sub_object.subjectname = request.POST["subjectname"]
+        print("sub_object before")
+        sub_object.save()
+        print("sub_object after")
+
+    return render(request, 'subject.html')
+
+
+def staffdetails(request):
+    print(request)
+    staff_details = staff.objects.all()
+    print(staff_details)
+    return render(request, 'staffdetails.html', {"staffdetails": staff_details})
+
+
+def admin(request):
+    return render(request, 'admin.html')
 
 
 def depart(request):
