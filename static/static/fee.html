@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<center>
+    <h2> Fee</h2>
+<form action="/student/fee/" method="POST">{% csrf_token %}
+
+            <input type="number" value="number"name="first"placeholder="1st year"/><br><br>
+
+            <input type="number" value="number"name="second"placeholder="2nd Semester"/><br><br>
+
+            <input type="number" name="third" placeholder="3rd Semester"/><br><br>
+
+            <input type="number" name="fourth"placeholder="4th Semester"/><br><br>
+
+            <input type="number" name="fifth"placeholder="5th Semester"/><br><br>
+
+            <input type="number" name="sixth"placeholder="6th Semester"/><br><br>
+
+            <input type="number"  name="seventh"placeholder="7th Semester"/><br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+    </center>
+{%endblock content%}

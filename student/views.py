@@ -1,6 +1,5 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect, HttpResponseRedirect
-
 from .models import *
 from django.contrib import messages
 
@@ -29,6 +28,7 @@ def login(request):
             request.session["user"] = student_object[0].id
             # return render(request, 'home.html', {"studentinfo": student_object[0]})
             return HttpResponseRedirect("/student/home/")
+
         else:
             print("invalid email or password")
             return render(request, 'login.html', {"error": "invalid email or password "})
@@ -85,15 +85,16 @@ def StuMarks(request):
 
 
 def Users(request):
+    print(request)
     student_list = studentinfo.objects.all()
     print(student_list)
-    return render(request, 'alluser.html')
+    return render(request, 'alluser.html', {'studentsinfo': student_list})
 
 
 @user_login_required
 def home(request):
     print(request)
-    student_object=studentinfo.objects.filter(id=request.session["user"])
+    student_object = studentinfo.objects.filter(id=request.session["user"])
     print(student_object)
     return render(request, 'home.html', {"studentinfo": student_object[0]})
     # return render(request, 'home.html')
@@ -119,31 +120,60 @@ def password(request):
         student_pass = studentinfo.objects.filter(email=email)
         if student_pass:
             print("email")
-            return render(request, 'forgot_password.html', {"studentinfo": f'Password sent to {email}'} )
+            return render(request, 'forgot_password.html', {"studentinfo": f'Password sent to {email}'})
         else:
             print("invalid email ")
             return render(request, 'forgot_password.html', {"error": "invalid email"})
 
     return render(request, 'forgot_password.html')
 
+
 def logout(request):
-    print(request,"logout calling")
+    print(request, "logout calling")
     del request.session["user"]
     return HttpResponseRedirect("/student/login/")
 
+
 @user_login_required
+def fees(request):
+    print(request)
+    if request.method == 'POST':
+        print("it's post methed")
+        stufee_object = fee.objects.create()
+        stufee_object.first = request.POST["first"]
+        stufee_object.second = request.POST["second"]
+        stufee_object.third = request.POST["third"]
+        stufee_object.fourth = request.POST["fourth"]
+        stufee_object.fifth = request.POST["fifth"]
+        stufee_object.sixth = request.POST["sixth"]
+        stufee_object.seventh = request.POST["seventh"]
+        print("stufee_object before")
+        stufee_object.save()
+        print("stufee_object after")
+
+    return render(request, "fee.html")
+
+
+def presentfees(request):
+    print(request)
+    present_fee = fee.objects.all().order_by('-id')[0:1]
+    print(present_fee)
+    return render(request, 'presentfee.html', {"fees": present_fee})
+
+
+
 def staff_names(request):
     print(request)
     if request.method == "GET":
-        subjects=Subject.objects.all()
-        return render(request, 'staff.html',{"subjects":subjects})
+        subjects = Subject.objects.all()
+        return render(request, 'staff.html', {"subjects": subjects})
     if request.method == "POST":
         print("its a post method")
         staff_object = staff.objects.create()
         staff_object.firstname = request.POST["firstname"]
         staff_object.lastname = request.POST["lastname"]
         staff_object.email = request.POST["email"]
-        print("requst.post",request.POST["subject"])
+        print("requst.post", request.POST["subject"])
         staff_object.subject = Subject.objects.get(id_no=int(request.POST["subject"]))
 
         print("staff_object before")
@@ -151,6 +181,7 @@ def staff_names(request):
         print("staff_object after")
 
     return render(request, 'staff.html')
+
 
 
 @user_login_required
@@ -175,10 +206,10 @@ def staffdetails(request):
     return render(request, 'staffdetails.html', {"staffdetails": staff_details})
 
 
-def admin (request):
+def admin(request):
     return render(request, 'admin.html')
 
 
-
-
-
+def depart(request):
+    print(request)
+    return render(request, 'departments.html')

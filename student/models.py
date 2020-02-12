@@ -24,12 +24,27 @@ class addmarks(models.Model):
     def __str__(self):
         return str(self.id_no)
 
+
 class Subject(models.Model):
     id_no = models.AutoField(primary_key=True)
     subjectname = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return str(self.id_no)
+
+
+
+class fee(models.Model):
+    first = models.IntegerField(null=True, blank=True)
+    second = models.IntegerField(null=True, blank=True)
+    third = models.IntegerField(null=True, blank=True)
+    fourth = models.IntegerField(null=True, blank=True)
+    fifth = models.IntegerField(null=True, blank=True)
+    sixth = models.IntegerField(null=True, blank=True)
+    seventh = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.third)
 
 
 class staff(models.Model):
@@ -39,9 +54,9 @@ class staff(models.Model):
     email = models.EmailField(max_length=30, null=True, blank=True)
     subject = models.ForeignKey(Subject,null=True, blank=True,on_delete=models.CASCADE)
 
+
     def __str__(self):
         return str(self.id)
-
 
 
 
