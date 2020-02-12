@@ -131,7 +131,7 @@ def logout(request):
     del request.session["user"]
     return HttpResponseRedirect("/student/login/")
 
-
+@user_login_required
 def staff_names(request):
     print(request)
     if request.method == "GET":
@@ -152,6 +152,8 @@ def staff_names(request):
 
     return render(request, 'staff.html')
 
+
+@user_login_required
 def sub_name(request):
     print(request)
     if request.method == "POST":
@@ -165,7 +167,7 @@ def sub_name(request):
 
     return render(request, 'subject.html')
 
-
+@user_login_required
 def staffdetails(request):
     print(request)
     staff_details = staff.objects.all()

@@ -37,7 +37,7 @@ class staff(models.Model):
     firstname = models.CharField(max_length=20, null=True, blank=True)
     lastname = models.CharField(max_length=20, null=True, blank=True)
     email = models.EmailField(max_length=30, null=True, blank=True)
-    subject = models.ForeignKey(Subject,on_delete=models.CASCADE)
+    subject = models.ForeignKey(Subject,null=True, blank=True,on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.id)
