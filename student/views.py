@@ -88,7 +88,7 @@ def Users(request):
     print(request)
     student_list = studentinfo.objects.all()
     print(student_list)
-    return render(request, 'alluser.html', {'studentinfo': student_list})
+    return render(request, 'alluser.html', {'studentsinfo': student_list})
 
 
 @user_login_required
@@ -155,9 +155,9 @@ def fees(request):
 
 def presentfees(request):
     print(request)
-    present_fee = fee.objects.all()
+    present_fee = fee.objects.all().order_by('-id')[0:1]
     print(present_fee)
-    return render(request, 'presentfee.html', {"fee": present_fee})
+    return render(request, 'presentfee.html', {"fees": present_fee})
 
 
 def staff_names(request):
